@@ -79,10 +79,14 @@ final class ProjectEditorMapper: ProjectEditorMapping {
         // Project
         let project = Project(path: sourceRootPath,
                               name: "Manifests",
+                              organizationName: nil,
+                              fileName: nil,
                               settings: projectSettings,
                               filesGroup: .group(name: "Manifests"),
                               targets: targets,
-                              schemes: [scheme])
+                              packages: [],
+                              schemes: [scheme],
+                              additionalFiles: [])
 
         // Graph
         var dependencies: [TargetNode] = []
